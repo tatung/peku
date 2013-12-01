@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activityRoot"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/messageEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="false"
+        android:layout_toLeftOf="@+id/sendButton"
+        android:autoText="true"
+        android:hint="message text" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Send" />
+
+    <LinearLayout
+        android:id="@+id/questionContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sendButton"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnQues1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="ロード中〜" />
+
+        <Button
+            android:id="@+id/btnQues2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ロード中〜" />
+
+        <Button
+            android:id="@+id/btnQues3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ロード中〜" />
+    </LinearLayout>
+    <TextView
+                android:id="@+id/txvWaiting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="相手を探しています〜"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/questionContainer"
+        android:layout_alignParentLeft="false"
+        android:layout_below="@+id/txvWaiting"
+        android:layout_marginTop="0dp" >
+
+        <LinearLayout
+            android:id="@+id/messagesContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
